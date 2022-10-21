@@ -1,13 +1,13 @@
 /*
 Beecrowd 1624 – Promotion – https://www.beecrowd.com.br/judge/pt/problems/view/2534
-(No time limit restrictions)
+(Knapsack problem)
 */
 
 #include <stdio.h>
 #include <stdbool.h>
 #include <math.h>
 
-int supermarket_rec(int[], int[], int, int, int);
+int supermarket_recursive(int[], int[], int, int, int);
 
 int main()
 {
@@ -25,13 +25,13 @@ int main()
             scanf("%d %d", &v[i], &w[i]);
         }
         scanf("%d", &c);
-        printf("%d\n", supermarket_rec(w, v, c, n, 0));
+        printf("%d\n", supermarket_recursive(w, v, c, n, 0));
     } while (true);
 
     return 0;
 }
 
-int supermarket_rec(int w[], int v[], int c, int n, int item)
+int supermarket_recursive(int w[], int v[], int c, int n, int item)
 {
     if (c == 0 || item >= n)
     {
@@ -39,9 +39,9 @@ int supermarket_rec(int w[], int v[], int c, int n, int item)
     }
     if (w[item] > c)
     {
-        return supermarket_rec(w, v, c, n, item + 1);
+        return supermarket_recursive(w, v, c, n, item + 1);
     }   
-    int r_max = v[item] + supermarket_rec(w, v, c - w[item], n, item + 1);
-    int l_max = supermarket_rec(w, v, c, n, item + 1);
+    int r_max = v[item] + supermarket_recursive(w, v, c - w[item], n, item + 1);
+    int l_max = supermarket_recursive(w, v, c, n, item + 1);
     return (r_max > l_max ? r_max : l_max);
 }
