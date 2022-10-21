@@ -1,6 +1,5 @@
 /*
 Beecrowd 2534 – General Exam – https://www.beecrowd.com.br/judge/pt/problems/view/2534
-(No time limit restrictions)
 */
 
 #include <stdio.h>
@@ -8,30 +7,26 @@ Beecrowd 2534 – General Exam – https://www.beecrowd.com.br/judge/pt/problems
 void quicksort_descending_order(int[], int, int);
 void swap(int *, int *);
 
-int main()
+int main ()
 {
-    int n, q, rank, x;
+	int n, q, rank;
 
-    do
-    {
-        scanf("%d %d", &n, &q);
-        int nota[n];
+	while (scanf("%d %d", &n, &q) != EOF)
+	{
+		int notas[n];
 
-        for (int i = 0; i < n; ++i)
-        {
-            scanf("%d", &nota[i]);
+		for (int i = 0; i < n; i++) {
+			scanf("%d", &notas[i]);
         }
 
-        quicksort_descending_order(nota, 0, n - 1);
-        
-        int counter = 1;
-        while (counter <= q)
-        {
-            scanf("%d", &rank);
-            printf("%d\n", nota[rank - 1]);
-            counter++;
-        }
-    } while (scanf("%d", &x) == 1);
+		quicksort_descending_order(notas, 0, n - 1);
+
+		while (q--)
+		{
+			scanf("%d", &rank);
+			printf("%d\n", notas[rank - 1]);
+		}
+	}
 
     return 0;
 }
