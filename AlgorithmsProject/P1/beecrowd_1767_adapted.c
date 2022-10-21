@@ -1,5 +1,6 @@
 /*
 Beecrowd 1767 – Santa Claus Bag – https://www.beecrowd.com.br/judge/pt/problems/view/2534
+(Knapsack problem)
 (Adapted: no running time restrictions and no need to print the amount of packets left.)
 */
 
