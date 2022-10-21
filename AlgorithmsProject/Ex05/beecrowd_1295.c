@@ -1,75 +1,88 @@
 /*
-Beecrowd 1295 – The Closest Pair Problem – https://www.beecrowd.com.br/judge/en/problems/view/1295
-(No time limit restrictions)
+Beecrowd 1295 — The Closest Pair Problem (https://www.beecrowd.com.br/judge/en/problems/view/1295)
+Algorithm explanation: https://www.youtube.com/watch?v=kCLGVat2SHk
 */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
-#include <stdbool.h>
-#define INT_MAX (2147483647)
+
+#define MAX 9999.99999
 
 typedef struct
 {
-    int x;
-    int y;
+    double x, y;
 } Point;
 
-typedef struct
-{
-    Point p1;
-    Point p2;
-} PairOfPoints;
+double distance(Point q, Point r);
+double closest(int a, int b);
+int cmp(const void *a, const void *b);
+double max(double a, double b) { return a > b ? a : b; }
+double min(double a, double b) { return a < b ? a : b; }
 
-PairOfPoints get_closest_pair(int, Point[]);
+Point p[10000];
 
 int main()
 {
-    while (true)
+    int n, i;
+    double d;
+
+    while (scanf("%d", &n) && n)
     {
-        int n;
-        scanf("%d", &n);
-        if (n == 0)
-        {
-            break;
-        }
+        for (i = 0; i < n; i++)
+            scanf("%lf %lf", &p[i].x, &p[i].y);
 
-        Point points[n];
+        qsort(p, n, sizeof(Point), cmp);
 
-        for (int i = 0; i < n; i++)
-        {
-            scanf("%d %d", &(points[i].x), &(points[i].y));
-        }
-
-        PairOfPoints closest_pair = get_closest_pair(n, points);
-        double dist_closest_pair = sqrt(pow(closest_pair.p1.x - closest_pair.p2.x, 2) + pow(closest_pair.p1.y - closest_pair.p2.y, 2));
-
-        if (dist_closest_pair < 10000)
-        {
-            printf("%.4f\n", dist_closest_pair);
-        }
-        else
-        {
+        d = closest(0, n - 1);
+        if (d > MAX)
             printf("INFINITY\n");
-        }
+        else
+            printf("%.4lf\n", d);
     }
+
     return 0;
 }
 
-PairOfPoints get_closest_pair(int n, Point p[])
+double distance(Point q, Point r)
 {
-    double min_dist = INT_MAX, dist;
-    PairOfPoints closest;
-    for (int i = 0; i < n - 1; i++)
+    double d = sqrt((q.x - r.x) * (q.x - r.x) + (q.y - r.y) * (q.y - r.y));
+    return min(d, MAX + 1.0);
+}
+
+double closest(int a, int b)
+{
+    int i, j;
+    double dl, dr, d, xp;
+
+    if (a == b)
+        return MAX + 1.0;
+    else if (b - a == 1)
+        return distance(p[b], p[a]);
+    else
     {
-        for (int j = i + 1; j < n; j++)
+        dl = closest(a, (a + b) / 2);
+        dr = closest((a + b) / 2 + 1, b);
+        d = min(dl, dr);
+        i = (a + b) / 2;
+        xp = p[i].x;
+        do
         {
-            dist = sqrt(pow(p[i].x - p[j].x, 2) + pow(p[i].y - p[j].y, 2));
-            if (dist < min_dist)
+            j = (a + b) / 2 + 1;
+            while (xp - p[j].x < d && j <= b)
             {
-                min_dist = dist;
-                closest = (PairOfPoints){p[i], p[j]};
+                dl = distance(p[j], p[i]);
+                d = min(d, dl);
+                j++;
             }
-        }
+            i--;
+        } while (xp - p[i].x < d && i >= a);
+
+        return d;
     }
-    return closest;
+}
+
+int cmp(const void *a, const void *b)
+{
+    return ((Point *)a)->x - ((Point *)b)->x;
 }
