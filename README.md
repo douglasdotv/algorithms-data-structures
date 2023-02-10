@@ -27,7 +27,13 @@ _____________________________________
 
 #### Semester 3
 
-_Coming soon_
+Data Structures\
+Programming Languages Concepts\
+Information Security\
+Fundamentals of Electronics\
+Numerical Calculus\
+Probability and Statistics\
+Scientific Research Methodology
 
 _____________________________________
 
