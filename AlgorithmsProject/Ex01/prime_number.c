@@ -7,7 +7,7 @@ Checking if entered numbers are prime.
 
 bool prime(int);
 
-int main()
+int main(void)
 {
     int n;
     while (n != 0)

@@ -10,7 +10,7 @@ void merge(int[], int, int, int);
 void print_array(int[], int);
 void swap(int *, int *);
 
-int main()
+int main(void)
 {
     srand(time(NULL));
     int m = rand() % 10 + 1, n = rand() % 10 + 1, a[m], b[n]; // Random arrays a[] (length m) and b[] (length n)
@@ -48,6 +48,8 @@ int main()
     merge(c, 0, m, m + n);
     print_array(c, m + n);
     puts("");
+
+    return 0;
 }
 
 void optimized_bubble_sort(int array[], int n)

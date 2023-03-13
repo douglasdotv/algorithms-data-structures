@@ -8,7 +8,7 @@ Converting a decimal number to a binary number using pointers.
 void convert_dec_to_bin(int *);
 int get_floor_power(int);
 
-int main()
+int main(void)
 {
     int decimal_number;
     printf("Enter a decimal number: ");
@@ -16,6 +16,7 @@ int main()
     printf("Converting %d to a binary number: ", decimal_number);
     convert_dec_to_bin(&decimal_number);
     printf("%d\n", decimal_number);
+
     return 0;
 }
 

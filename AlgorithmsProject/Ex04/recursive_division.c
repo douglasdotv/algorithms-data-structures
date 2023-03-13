@@ -6,7 +6,7 @@ Recursively dividing two numbers.
 
 int recursive_division(int, int);
 
-int main()
+int main(void)
 {
     int a, b;
     printf("Enter two numbers: ");

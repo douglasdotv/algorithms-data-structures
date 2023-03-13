@@ -8,7 +8,7 @@ Printing the next day date for each inputted date.
 void get_next_day(int *, int *, int *);
 bool verify_leap_year(int);
 
-int main()
+int main(void)
 {
     int n;
     printf("Enter n (amount of dates): ");

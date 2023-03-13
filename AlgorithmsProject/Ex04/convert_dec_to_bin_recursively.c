@@ -6,7 +6,7 @@ Recursively converting a decimal number to a binary number.
 
 void convert_dec_to_bin_rec(int);
 
-int main()
+int main(void)
 {
     int number;
     printf("Enter a decimal number: ");

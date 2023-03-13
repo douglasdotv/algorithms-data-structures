@@ -7,7 +7,7 @@ Searching for the first occurence of a char on a string.
 
 int search_char(char[], char);
 
-int main()
+int main(void)
 {
     char chosen_word[69], chosen_char;
     printf("Enter a word: ");

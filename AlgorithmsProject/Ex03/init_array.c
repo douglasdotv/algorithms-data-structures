@@ -2,10 +2,10 @@
 Initializing an array with 'n' elements 'val'.
 */
 
-void init_vetor(int, int[], int);
+void init_array(int, int[], int);
 void print_array(int[], int n);
 
-int main()
+int main(void)
 {
     int n, value;
     printf("Enter array length and a default value for each element: ");
@@ -18,10 +18,11 @@ int main()
 
     printf("Printing our array: \n");
     print_array(array, n);
+
     return 0;
 }
 
-void init_vetor(int n, int a[], int val)
+void init_array(int n, int a[], int val)
 {
     for (int i = 0; i < n; i++)
     {

@@ -10,13 +10,14 @@ Recursively calculating the value of the following the series:
 float series_1_n(int);
 float series_n2plus1_nplus3(int);
 
-int main()
+int main(void)
 {
     int n;
     printf("Enter n: \n");
     scanf("%d", &n);
     printf("The sum of the %d first terms of 1 + 1/2 + 1/3 + ... + 1/n is: \n%.2f\n", n, series_1_n(n));
     printf("The sum of the %d first terms of 2/4 + 1 + 5/3 + ... + (n^2 + 1)/(n + 3) is: \n%.2f\n", n, series_n2plus1_nplus3(n));
+
     return 0;
 }
 

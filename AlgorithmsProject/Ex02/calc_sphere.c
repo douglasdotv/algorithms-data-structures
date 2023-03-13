@@ -7,13 +7,14 @@ Calculating area and volume of a sphere using pointers.
 
 float calc_esfera(float, float *, float *);
 
-int main()
+int main(void)
 {
     float r, area, vol;
     printf("Enter radius: ");
     scanf("\n%f", &r);
     calc_esfera(r, &area, &vol);
     printf("Area: %.2f\nVolume: %.2f\n", area, vol);
+
     return 0;
 }
 

@@ -7,7 +7,7 @@ Printing the first n prime numbers.
 
 bool prime(int);
 
-int main()
+int main(void)
 {
     int n, counter = 0, i = 2;
     printf("Enter a number (or enter 0 to exit the program): ");

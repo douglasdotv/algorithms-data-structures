@@ -7,7 +7,7 @@ Verifying if a given year is a leap year.
 
 bool verify_leap_year(int);
 
-int main()
+int main(void)
 {
     int year;
     printf("Enter a year: ");
@@ -21,6 +21,7 @@ int main()
     {
         printf("%d isn't a leap year.", year);
     }
+
     return 0;
 }
 

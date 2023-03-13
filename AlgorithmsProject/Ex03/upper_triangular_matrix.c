@@ -8,7 +8,7 @@ Verifying if a matrix (multidimensional array) is an upper triangular matrix.
 void print_md_array(int, int, int a[][69]);
 bool upper_triangular_matrix(int, int[][69]);
 
-int main()
+int main(void)
 {
     int a[3][3] = {
         {1, 2, 3},

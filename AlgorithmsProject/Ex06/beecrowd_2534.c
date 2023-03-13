@@ -7,7 +7,7 @@ Beecrowd 2534 – General Exam – https://www.beecrowd.com.br/judge/pt/problems
 void quicksort_descending_order(int[], int, int);
 void swap(int *, int *);
 
-int main ()
+int main (void)
 {
 	int n, q, rank;
 

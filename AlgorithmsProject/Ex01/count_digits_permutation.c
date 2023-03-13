@@ -10,7 +10,7 @@ Also, function is_permutation reads two numbers 'a' and 'b' and returns true if 
 int count_digits(int, int);
 bool is_permutation(int, int);
 
-int main()
+int main(void)
 {
     int x = 5412434, y = 4321445, z = 4312455, digit;
 
@@ -26,8 +26,11 @@ int main()
         printf("Digit %d appears %d times on number %d.\n", digit, count_digits(x, digit), x);
     }
 
-    is_permutation(x, y) ? printf("%d is a permutation of %d.\n", x, y) : printf("%d isn't a permutation of %d.\n", x, y);
-    is_permutation(x, z) ? printf("%d is a permutation of %d.\n", x, z) : printf("%d isn't a permutation of %d.\n", x, z);
+    is_permutation(x, y) ?
+    printf("%d is a permutation of %d.\n", x, y) : printf("%d isn't a permutation of %d.\n", x, y);
+
+    is_permutation(x, z) ?
+    printf("%d is a permutation of %d.\n", x, z) : printf("%d isn't a permutation of %d.\n", x, z);
 
     return 0;
 }

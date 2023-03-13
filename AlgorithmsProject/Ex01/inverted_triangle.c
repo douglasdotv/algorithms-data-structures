@@ -7,7 +7,7 @@ Drawing an inverted triangle formed by 'n' characters 'ch' in its base.
 
 void inverted_triangle(int, char);
 
-int main()
+int main(void)
 {
     int n;
     char ch;

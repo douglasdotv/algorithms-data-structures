@@ -7,7 +7,7 @@ Recursively printing an array, from the first element to the last one.
 void imprimir_array_recursivamente(int[], int);
 void inserir_elementos(int[], int);
 
-int main()
+int main(void)
 {
     int n;
     printf("Digite a quantidade n de elementos presentes no array: \n");

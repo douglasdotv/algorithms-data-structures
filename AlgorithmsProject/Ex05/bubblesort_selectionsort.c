@@ -10,7 +10,7 @@ void selection_sort(int[], int);
 void print_array(int[], int);
 void swap(int *, int *);
 
-int main()
+int main(void)
 {
     srand(time(NULL));
     int n = rand() % 69 + 1, array[n]; // Random array

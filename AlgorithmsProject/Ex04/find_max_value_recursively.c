@@ -7,7 +7,7 @@ Recursively finding the max value in an array.
 int find_max_value_rec(int[], int);
 void print_array(int[], int n);
 
-int main()
+int main(void)
 {
     srand(time(NULL));
     int n = rand() % 20, array[n]; // Random array
@@ -20,6 +20,7 @@ int main()
     print_array(array, n);
 
     printf("Max value: %d", find_max_value_rec(array, n));
+
     return 0;
 }
 

@@ -8,7 +8,7 @@ void scalar_multiplication(int, int, double a[][69], double);
 void get_md_array_elements(int, int, double[][69]);
 void print_md_array(int, int, double a[][69]);
 
-int main()
+int main(void)
 {
     int r, c;
     printf("Enter the number of rows: ");

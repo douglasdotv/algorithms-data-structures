@@ -8,7 +8,7 @@ Checking if an array of strings is in alphabetical order.
 
 bool is_a_sorted_array_of_strings(int, char[][21]);
 
-int main()
+int main(void)
 {
     int n;
     printf("Enter n (total amount of strings): ");

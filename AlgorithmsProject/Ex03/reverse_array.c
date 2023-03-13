@@ -7,7 +7,7 @@ Reversing an array.
 void reverse_array(int[], int);
 void print_array(int[], int n);
 
-int main()
+int main(void)
 {
     srand(time(NULL));
     int n = rand() % 10 + 1, array[n]; // Random array
@@ -20,6 +20,7 @@ int main()
     print_array(array, n);
 
     reverse_array(array, n);
+
     return 0;
 }
 

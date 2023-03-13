@@ -10,7 +10,7 @@ Beecrowd 1767 – Santa Claus Bag – https://www.beecrowd.com.br/judge/pt/probl
 
 void imprime_qtd_brinquedos_e_peso(int[], int[], int, int);
 
-int main()
+int main(void)
 {
     int k = 0, n, pac, c = 50;
     scanf("%d", &n);

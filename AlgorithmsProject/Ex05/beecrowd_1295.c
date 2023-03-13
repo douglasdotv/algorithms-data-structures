@@ -22,7 +22,7 @@ double min(double a, double b) { return a < b ? a : b; }
 
 Point p[10000];
 
-int main()
+int main(void)
 {
     int n, i;
     double d;

@@ -5,7 +5,7 @@ Finding the maximum number of operations that a binary search algorithm will per
 #include <stdio.h>
 #include <math.h>
 
-int main()
+int main(void)
 {
     int n;
     printf("Enter total amount of elements: ");

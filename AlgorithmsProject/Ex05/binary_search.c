@@ -10,7 +10,7 @@ int binary_search(int[], int, int);
 void print_array(int[], int n);
 void swap(int *, int *);
 
-int main()
+int main(void)
 {
     srand(time(NULL));
     int n = rand() % 69 + 1, a[n]; // Random array

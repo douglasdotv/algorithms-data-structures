@@ -9,7 +9,7 @@ Beecrowd 1624 – Promotion – https://www.beecrowd.com.br/judge/pt/problems/vi
 
 int supermarket_recursive(int[], int[], int, int, int);
 
-int main()
+int main(void)
 {
     do
     {

@@ -6,12 +6,13 @@ Calculating the factorial of a number.
 
 void factorial(int);
 
-int main()
+int main(void)
 {
     int n;
     printf("Enter a number: ");
     scanf("\n%d", &n);
     factorial(n);
+
     return 0;
 }
 

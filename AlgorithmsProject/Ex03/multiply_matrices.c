@@ -8,7 +8,7 @@ void mult_mat(int, int, int, int[][69], int[][69], int[][69]);
 void get_md_array_elements(int, int, int[][69]);
 void print_md_array(int, int, int[][69]);
 
-int main()
+int main(void)
 {
     int n, m, k;
     printf("Enter n, m and k: \n");

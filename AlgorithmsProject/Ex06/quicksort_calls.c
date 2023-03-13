@@ -8,7 +8,7 @@ void quicksort(int[], int, int);
 void swap(int *, int *);
 void print_array(int[], int);
 
-int main()
+int main(void)
 {
     int v[] = {78, 21, 52, 33, 94}, w[] = {82, 31, 27, 18, 65, 40},
         v_length = sizeof(v) / sizeof(v[0]), w_length = sizeof(w) / sizeof(w[0]);

@@ -7,13 +7,15 @@ Removing duplicate elements from an array.
 int remove_duplicates(int[], int n);
 void print_array(int[], int n);
 
-int main()
+int main(void)
 {
     int array[10] = {2, 2, 2, 1, 1, 1, 1, 3, 4, 4};
     printf("Array with duplicate elements: \n");
     print_array(array, 10);
     printf("Removing duplicate elements: \n");
     print_array(array, 10 - remove_duplicates(array, 10));
+
+    return 0;
 }
 
 int remove_duplicates(int array[], int n) // Will remove duplicate elements AND return the amount of removed elements.
